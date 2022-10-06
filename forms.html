@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <h2>Formulários</h1>    
+    <hr>
+    <form method="post">
+        <div>
+            <label for="txtNomeCompleto">Nome completo</label><br>
+            <input id="txtNomeCompleto" type="text" name="NomeCompleto">
+        </div>
+
+        <div>
+            <label for="txtEmail">Nome Email</label><br>
+            <input id="txtEmail" type="email" name="Email">
+        </div>
+
+        <fieldset style="margin-bottom: 10px; width: 300px;">
+            <legend>Cargo</legend>
+            <input id="rdProgramador" type="radio" name="Cargo" value="P" checked="true">
+            <label for="rdProgramador">Programador</label><br>
+            <input id="rdWebDesigner" type="radio" name="Cargo" value="W">
+            <label for="rdWebDesigner">Web Designer</label>
+        </fieldset>
+
+        <input id="cbAceito" type="checkbox" name="Aceito">
+        <label for="cbAceito">Aceito os termos de uso</label>
+
+        <p>
+            <select class="fundoCinzaEscuro branco" name="slcLinguagens" id="slcLinguagens">
+                <option value="HTML">HTML</option>
+                <option value="C#">C#</option>
+                <option value="CSS">CSS</option>
+                <option value="Python">Python</option>
+            </select>
+        </p>
+
+        <p>
+            <select name="Estado" id="slcEstado" size="0">              
+                <option value="MG">Minas Gerais</option>
+                <option value="SP">São Paulo</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="GO">Goiás</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="txtCidade">Cidade</label><br>
+            <input id="txtCidade" type="text" name="Cidade" list="cidades" style="height: 20px; vertical-align: middle;">
+            <datalist id="cidades">
+                <option value="Belo Horizonte"></option>
+                <option value="Limeira"></option>
+                <option value="Manaus"></option>
+                <option value="Porto Seguro"></option>
+                <option value="Fortaleza"></option>
+                <option value="Curitíba"></option>
+                <option value="Rio Verde"></option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="button" value="Enviar" onclick="this.form.submit()">
+            <input type="reset" value="Limpar">            
+        </p>
+    </form>
+</body>
+
+</html>
